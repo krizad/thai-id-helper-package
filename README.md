@@ -2,6 +2,8 @@
 
 ชุดเครื่องมือ (Utility Kit) แบบครบวงจรสำหรับจัดการเลขประจำตัวประชาชนไทย รองรับการตรวจสอบความถูกต้อง (Validation), การจัดรูปแบบ (Formatting), การเซ็นเซอร์ข้อมูล (Masking สำหรับ PDPA), การสุ่มเลขสำหรับการทดสอบ (Mocking) และการดึงข้อมูลเชิงลึกจากเลขบัตร
 
+🚀 **Live Demo:** [https://krizad.github.io/thai-id-kit-demo/](https://krizad.github.io/thai-id-kit-demo/)
+
 ## 📦 การติดตั้ง (Installation)
 
 สามารถติดตั้งผ่าน Package Manager ที่คุณใช้งาน:
