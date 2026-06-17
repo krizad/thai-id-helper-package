@@ -1,0 +1,37 @@
+{
+  "name": "@krizad/thai-id-kit",
+  "version": "1.0.2",
+  "description": "A comprehensive utility kit for validating, formatting, masking, and extracting information from Thai National ID cards.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krizad/thai-id-kit.git"
+  },
+  "keywords": [
+    "thai",
+    "id",
+    "citizen",
+    "national",
+    "validator",
+    "format",
+    "masking",
+    "generator",
+    "pdpa"
+  ],
+  "author": "KriZad",
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5",
+    "vitest": "^4.1.9"
+  }
+}
