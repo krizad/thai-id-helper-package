@@ -1,16 +1,39 @@
 {
   "name": "@krizad/thai-id-kit",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "description": "A comprehensive utility kit for validating, formatting, masking, and extracting information from Thai National ID cards.",
   "homepage": "https://krizad.github.io/thai-id-kit-demo/",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=16"
+  },
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src/ --ext .ts",
+    "lint:fix": "eslint src/ --ext .ts --fix",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "format:check": "prettier --check \"src/**/*.ts\" \"test/**/*.ts\"",
+    "typecheck": "tsc --noEmit",
     "prepublishOnly": "npm run build"
   },
   "repository": {
@@ -19,18 +42,42 @@
   },
   "keywords": [
     "thai",
+    "thailand",
     "id",
     "citizen",
     "national",
+    "national-id",
     "validator",
+    "validate",
     "format",
     "masking",
+    "mask",
     "generator",
-    "pdpa"
+    "mock",
+    "pdpa",
+    "personal-data",
+    "privacy",
+    "เลขบัตรประชาชน",
+    "บัตรประชาชน",
+    "ตรวจสอบเลขบัตร",
+    "เลขประจำตัวประชาชน",
+    "เซ็นเซอร์บัตร",
+    "จัดรูปแบบบัตร",
+    "สุ่มเลขบัตร",
+    "ข้อมูลบัตรประชาชน",
+    "พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล",
+    "ประเภทบุคคล",
+    "รหัสจังหวัด"
   ],
   "author": "KriZad",
   "license": "MIT",
+  "type": "module",
   "devDependencies": {
+    "@vitest/coverage-v8": "^4.1.9",
+    "eslint": "^9.28.0",
+    "@eslint/js": "^9.28.0",
+    "typescript-eslint": "^8.33.0",
+    "prettier": "^3.5.3",
     "tsup": "^8.0.2",
     "typescript": "^5.4.5",
     "vitest": "^4.1.9"
