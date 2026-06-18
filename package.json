@@ -2,7 +2,7 @@
   "name": "@krizad/thai-id-helper",
   "version": "1.0.0",
   "description": "A comprehensive utility kit for validating, formatting, masking, and extracting information from Thai National ID cards.",
-  "homepage": "https://krizad.github.io/thai-id-kit-demo/",
+  "homepage": "https://krizad.github.io/thai-id-helper-demo/",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
